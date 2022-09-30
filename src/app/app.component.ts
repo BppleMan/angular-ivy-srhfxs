@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import "esm-lib";
 
 @Component({
   selector: 'app-root',
