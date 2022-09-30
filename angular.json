@@ -11,14 +11,8 @@
             "prefix": "app",
             "architect": {
                 "build": {
-                    "builder": "@angular-builders/custom-webpack:browser",
+                    "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "customWebpackConfig": {
-                            "path": "./webpack.config.js",
-                            "mergeRules": {
-                                "externals": "replace"
-                            }
-                        },
                         "outputPath": "dist/angular-demo",
                         "index": "src/index.html",
                         "main": "src/main.ts",
@@ -67,10 +61,7 @@
                     "defaultConfiguration": "production"
                 },
                 "serve": {
-                    "builder": "@angular-builders/custom-webpack:dev-server",
-                    "options": {
-                        "browserTarget": "angular-demo:build"
-                    },
+                    "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
                             "browserTarget": "angular-demo:build:production"
